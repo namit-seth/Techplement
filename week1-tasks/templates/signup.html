@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign_up</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <main class="main">
+    <div class="card">
+        <span class="card_top">
+            <a href="/login">
+                <h2 class="redirect">LOGIN</h2>
+            </a>
+            <h2>SIGN UP</h2>
+        </span>
+        <form action="/sign_up" method="post" class="form">
+            <input type="text" name="id" id="id" placeholder="User Id" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="cnfrm_pass" id="password" placeholder="Confirm Password" required>
+            <button class="action"><b>SIGN UP</b></button>
+        </form>
+    </div>
+    </main>
+</body>
+</html>

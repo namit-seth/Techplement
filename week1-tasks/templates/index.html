@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://kit.fontawesome.com/35f90f5839.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <script src="static/script.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="logo">TODO</a>
+        <a href="logout">LOGOUT</a>
+    </nav>
+    <main>
+        <form  class="task" method="POST" action="/add">
+            <input class="task_input" type="text" name="task" id="task" placeholder="Add New Task">
+            <button class="task_action" ><i class="fa-solid fa-plus fa-xl"></i></button>
+        </form>
+        <!-- {{tasks}} -->
+        {% for i in tasks %}
+        <div class="task">
+            <span class="task_text" id="{{ i[0] }}">{{ i[2] }}</span>
+            <span class="icons" id="icons_{{ i[0] }}">
+            <button class="task_action" onclick="edit('{{ i[0] }}')"><i class="fa-regular fa-pen-to-square fa-xl"></i></button>
+            <button class="task_action" onclick="del('{{ i[0] }}')"><i class="fa-regular fa-trash-can fa-xl"></i></button>
+            </span>
+            <form action="/del" method="POST" style="display: none;" id="form_del_{{ i[0] }}"><input type="text" name="id" value="{{ i[0] }}"></form>
+            <form action="/edit" method="POST" style="display: none;" id="form_edit_{{ i[0] }}"><input type="text" name="id" value="{{ i[0] }}"><input type="text" name="task" value="{{ i[2] }}" id="edit_{{ i[0] }}"></form>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+</html>

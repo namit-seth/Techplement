@@ -1,0 +1,112 @@
+:root{
+    --text: rgb(22, 20, 6);
+--background: rgb(251, 249, 241);
+--primary: rgb(203, 179, 60);
+--secondary: rgb(235, 221, 136);
+--accent: rgb(183, 226, 80);
+
+}
+body {
+    height: 100vh;
+    margin: 0px;
+    background-color: var(--background);
+}
+.task {
+    margin:  25px auto;
+    width: 60%;
+    background-color: var(--primary);
+    padding:  10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow:0 0 15px var(--accent);
+}
+.logo{
+    font-size: 50px;
+    font-family: 'Beau Rivage', cursive;
+font-family: 'Dancing Script', cursive;
+}
+.nav{
+    padding: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px;
+}
+.task > input {
+    background-color: inherit;
+    width: 90%;
+    font-size: large;
+    border: none;
+    border-bottom: solid;
+}
+.task_text {
+    width: 85%;
+    font-size: large;
+    /* border: none; */
+    border-bottom: solid;
+}
+.task>.icons{
+    margin: 5px;
+}
+.task_action {
+    background: none;
+    border: none;
+}
+.task:nth-child(2n){
+    background-color: var(--secondary);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.card {
+    box-sizing: border-box;  
+    border: solid 1px;
+    width: 50%;
+    padding: 5%;
+    margin: auto;
+    box-shadow: 0 0  20px var(--accent);
+}
+.card h2 {
+    display: inline;
+}
+.card_top{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.redirect{
+    background-color: var(--secondary);
+    border: 10px solid var(--secondary);
+    border-radius: 15px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.form > input {
+    box-sizing: border-box  ;
+    width: 50%;
+    border-radius: 12px;
+    padding-left: 10px;
+}
+.action{
+    background-color: var(--primary);
+    border: 10px solid var(--primary);
+    border-radius: 12px;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
